@@ -3,8 +3,8 @@
 	// key: タスクの文字列 value: 完了しているかどうかの真偽値
 	let tasks = new Map();
 	
-	let fs = require('fs');
-	let fileName = './tasks.json';	
+	const fs = require('fs');
+	const fileName = './tasks.json';	
 
 	/**
 	 * タスクをファイルに保存する
@@ -15,7 +15,7 @@
 	
 	// 同期的にファイルから復元
 	try {
-		let data = fs.readFileSync(fileName, 'utf8');
+		const data = fs.readFileSync(fileName, 'utf8');
 		tasks = new Map(JSON.parse(data));
 	} catch (ignore) {
 		console.log(fileName + 'から復元できませんでした');
