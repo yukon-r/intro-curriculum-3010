@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
-	let todo = require('./index.js');
-	let assert = require('assert');
+	const todo = require('./index.js');
+	const assert = require('assert');
 	
 	// todo と list のテスト
 	todo.todo('ノートを買う');
